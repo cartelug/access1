@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelug - Premium Streaming Support</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="video-background-container">
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="background-video.webm" type="video/webm">
+            <source src="background-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <div class="page-content">
+
+        <header class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo-link">
+                        <img src="logo.png" alt="Cartelug Logo" id="logo">
+                    </a>
+                    <p class="tagline">AVAILABLE IN UGANDA AND SOUTH SUDAN</p>
+                </div>
+                <nav id="main-nav" class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Open Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- SERVICES -->
+            <section id="services" class="platform-selection section-padding">
+                <div class="container">
+                    <h2 class="section-title">Choose Your Service</h2>
+                    <div class="platform-grid">
+
+                        <div class="platform-card netflix">
+                            <img src="netflix.png" alt="Netflix Logo" class="platform-logo-img">
+                            <a href="#" id="netflix-start-btn" class="get-started-btn netflix-btn">Get Started</a>
+                        </div>
+                        <div class="platform-card prime">
+                            <img src="prime-video.png" alt="Prime Video Logo" class="platform-logo-img">
+                            <a href="#" id="prime-start-btn" class="get-started-btn prime-btn">Get Started</a>
+                        </div>
+                        <div class="platform-card spotify">
+                            <img src="spotify.png" alt="Spotify Logo" class="platform-logo-img">
+                            <a href="#" id="spotify-start-btn" class="get-started-btn spotify-btn">Get Started</a>
+                        </div>
+                        <div class="platform-card social-boost-card">
+                            <img src="instagram.png" alt="Instagram Logo" class="platform-logo-img insta-boost-logo">
+                            <h3 class="service-title-text">Boost Instagram Likes</h3>
+                            <a href="instagram-boost.html" class="get-started-btn purple-btn">Get Started</a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section id="contact-cta" class="cta-section section-padding alt-bg">
+                <div class="container">
+                    <h2 class="section-title">Need Assistance?</h2>
+                    <p class="cta-text">Click below for fast support from our expert team.</p>
+                    <a href="contact.html" class="cta-button">Get Help Now</a>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section id="about" class="why-choose-us section-padding">
+                <div class="container">
+                    <h2 class="section-title">Why Choose Cartelug?</h2>
+                    <div class="features-grid">
+                        <div class="feature-item support-feature">
+                            <i class="fas fa-headset feature-icon"></i>
+                            <h3>24/7 Customer Support</h3>
+                            <p>Always available to assist with your streaming needs, day or night.</p>
+                        </div>
+                        <div class="feature-item">
+                            <p class="trust-text">Trusted by over <strong>1500</strong> Ugandans and <strong>300+</strong> South Sudanese.</p>
+                            <div class="feature-flags">
+                                <img src="uganda-flag.png" alt="Uganda Flag" class="country-flag">
+                                <img src="south-sudan-flag.png" alt="South Sudan Flag" class="country-flag">
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="payment-feature-logos">
+                                <img src="mtn.png" alt="MTN Mobile Money" class="payment-logo-small">
+                                <img src="airtel.png" alt="Airtel Money" class="payment-logo-small">
+                            </div>
+                            <h3>Easy Payments</h3>
+                            <p>Convenient Mobile Money options (MTN & Airtel).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS -->
+            <section class="testimonials section-padding alt-bg">
+                <div class="container">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <div class="swiper testimonial-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-card-new">
+                                    <img src="1.png" alt="Spotify Feedback 1" class="testimonial-img-large">
+                                    <p class="testimonial-quote">"Hitesh loves the Spotify"</p>
+                                    <cite class="testimonial-cite">Spotify Feedback</cite>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-card-new">
+                                    <img src="2.png" alt="Spotify Feedback 2" class="testimonial-img-large">
+                                    <p class="testimonial-quote">"Olelo loves how easy it is to pay for 6 months of Spotify."</p>
+                                    <cite class="testimonial-cite">Spotify Feedback</cite>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-card-new">
+                                    <img src="3.png" alt="Spotify Feedback 3" class="testimonial-img-large">
+                                    <p class="testimonial-quote">"Alma Enjoys the Spotify."</p>
+                                    <cite class="testimonial-cite">Spotify Feedback</cite>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-card-new">
+                                    <img src="4.png" alt="Netflix Feedback 1" class="testimonial-img-large">
+                                    <p class="testimonial-quote">"Ugandan User successfully connected to Netflix, and paid after."</p>
+                                    <cite class="testimonial-cite">Netflix Feedback</cite>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-card-new">
+                                    <img src="5.png" alt="Netflix Feedback 2" class="testimonial-img-large">
+                                    <p class="testimonial-quote">"South Sudanese User successfully connected to Netflix."</p>
+                                    <cite class="testimonial-cite">Netflix Feedback</cite>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="contact.html">Contact Us</a>
+                    </div>
+                    <div class="payment-info">
+                        <p>Secure Payments Accepted via Mobile Money:</p>
+                        <div class="payment-logos">
+                            <img src="mtn.png" alt="MTN Mobile Money" class="payment-logo">
+                            <img src="airtel.png" alt="Airtel Money" class="payment-logo">
+                        </div>
+                    </div>
+                    <p class="copyright">&copy; <span id="year"></span> Cartelug. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- MODALS -->
+        <div id="netflix-modal" class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <img src="netflix.png" alt="Netflix" class="modal-logo">
+                <h2>Netflix Package Features</h2>
+                <ul class="features-list">
+                    <li><i class="fas fa-desktop"></i> 2 Devices Access</li>
+                    <li><i class="fas fa-user-clock"></i> 1 Device at a Time</li>
+                    <li><i class="fas fa-video"></i> 4K UHD Quality</li>
+                    <li><i class="fas fa-download"></i> Downloads Available</li>
+                </ul>
+                <a href="netflix-order.html" class="modal-button netflix-btn">Get Now</a>
+            </div>
+        </div>
+
+        <div id="prime-modal" class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <img src="prime-video.png" alt="Prime Video" class="modal-logo">
+                <h2>Prime Video Features</h2>
+                <ul class="features-list">
+                    <li><i class="fas fa-download"></i> Downloads Available</li>
+                    <li><i class="fas fa-desktop"></i> 2 Devices Access</li>
+                    <li><i class="fas fa-video"></i> 4K UHD Quality</li>
+                </ul>
+                <a href="prime-order.html" class="modal-button prime-btn">Get Now</a>
+            </div>
+        </div>
+
+        <div id="spotify-modal" class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <img src="spotify.png" alt="Spotify" class="modal-logo">
+                <h2>Spotify Premium Features</h2>
+                <ul class="features-list">
+                    <li><i class="fas fa-user-check"></i> Use Your Own Account</li>
+                    <li><i class="fas fa-music"></i> Unlimited Music Streaming</li>
+                    <li><i class="fas fa-download"></i> Downloads for Offline Use</li>
+                    <li><i class="fas fa-headphones"></i> Ad-Free Listening</li>
+                </ul>
+                <a href="spotify-order.html" class="modal-button spotify-btn">Get Now</a>
+            </div>
+        </div>
+
+        <!-- SCRIPTS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+
+    </div>
+</body>
+</html>
