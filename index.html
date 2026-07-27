@@ -1,235 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartelug - Premium Streaming Support</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07070a">
+  <meta name="description" content="97.world helps brands, creators and public figures grow on Instagram, TikTok and Facebook, with responsive support in Uganda and South Sudan.">
+  <title>97.world — Social Growth, Made Simple</title>
+  <link rel="icon" href="assets/ui/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/ui/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="video-background-container">
-        <video autoplay muted loop playsinline id="background-video">
-            <source src="background-video.webm" type="video/webm">
-            <source src="background-video.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="97.world home">
+        <img src="assets/brand/97-mark.png" alt="" class="brand-mark">
+        <span class="brand-word">97<span>.world</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#growth">Growth</a>
+        <a href="#process">How it works</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="contact.html">Support</a>
+      </nav>
+      <a class="button button-small button-primary desktop-cta" href="followers.html">Order followers</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" data-mobile-nav>
+      <a href="#growth">Growth</a>
+      <a href="#process">How it works</a>
+      <a href="#entertainment">Entertainment</a>
+      <a href="contact.html">Support</a>
+      <a class="button button-primary" href="followers.html">Order followers</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/hero/97-ambassador-desktop.webp">
+          <source src="assets/video/97-growth-loop.mp4" type="video/mp4">
         </video>
+      </div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+
+      <div class="shell hero-content">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span> Uganda · South Sudan · Global delivery</div>
+          <h1>Grow the audience.<br><span>Keep the momentum.</span></h1>
+          <p class="hero-lede">Follower growth for Instagram, TikTok and Facebook—built around clear packages, guided ordering and responsive human support.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="followers.html">Start a growth order <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="#growth">Explore packages</a>
+          </div>
+          <div class="hero-trust" aria-label="Service highlights">
+            <span>No password required</span>
+            <span>Gradual delivery options</span>
+            <span>Mobile Money support</span>
+          </div>
+        </div>
+
+        <div class="growth-dashboard reveal reveal-delay" aria-label="Example social growth dashboard">
+          <div class="dashboard-top">
+            <div>
+              <span class="mini-label">ACTIVE CAMPAIGN</span>
+              <strong>Audience growth</strong>
+            </div>
+            <span class="live-chip">LIVE</span>
+          </div>
+          <div class="dashboard-number"><span data-counter="10000">10,000</span><small>followers</small></div>
+          <div class="dashboard-chart" aria-hidden="true">
+            <span style="height:25%"></span><span style="height:34%"></span><span style="height:42%"></span><span style="height:53%"></span><span style="height:61%"></span><span style="height:72%"></span><span style="height:84%"></span><span style="height:96%"></span>
+          </div>
+          <div class="dashboard-platforms">
+            <div><span class="platform-dot instagram-dot"></span>Instagram</div>
+            <div><span class="platform-dot tiktok-dot"></span>TikTok</div>
+            <div><span class="platform-dot facebook-dot"></span>Facebook</div>
+          </div>
+          <div class="dashboard-footer">
+            <span>Campaign support</span>
+            <strong>97.world</strong>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#growth" aria-label="Scroll to growth services"><span></span></a>
+    </section>
+
+    <section class="logo-strip" aria-label="Supported social platforms">
+      <div class="shell logo-strip-inner">
+        <span>Instagram growth</span><i></i><span>TikTok growth</span><i></i><span>Facebook growth</span><i></i><span>Creator support</span>
+      </div>
+    </section>
+
+    <section class="section" id="growth">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <span class="kicker">SOCIAL GROWTH</span>
+            <h2>One strong offer.<br>Three major platforms.</h2>
+          </div>
+          <p>Choose the platform, choose the target, and send us the public profile link. We guide the rest without asking for your password.</p>
+        </div>
+
+        <div class="platform-cards">
+          <article class="platform-card card-instagram reveal">
+            <div class="platform-card-top">
+              <div class="platform-symbol">IG</div>
+              <span>Instagram</span>
+            </div>
+            <h3>Build visible social proof.</h3>
+            <p>Follower campaigns for creators, businesses, artists, events and public-facing brands.</p>
+            <ul class="clean-list">
+              <li>Public profiles and pages</li>
+              <li>Flexible order sizes</li>
+              <li>Delivery updates</li>
+            </ul>
+            <a href="followers.html?platform=instagram">Grow on Instagram <span>↗</span></a>
+          </article>
+
+          <article class="platform-card card-tiktok reveal reveal-delay-sm">
+            <div class="platform-card-top">
+              <div class="platform-symbol">TT</div>
+              <span>TikTok</span>
+            </div>
+            <h3>Turn attention into momentum.</h3>
+            <p>Structured follower delivery for profiles that need stronger reach, credibility and campaign energy.</p>
+            <ul class="clean-list">
+              <li>New and established accounts</li>
+              <li>Campaign-ready packages</li>
+              <li>Human order support</li>
+            </ul>
+            <a href="followers.html?platform=tiktok">Grow on TikTok <span>↗</span></a>
+          </article>
+
+          <article class="platform-card card-facebook reveal reveal-delay-md">
+            <div class="platform-card-top">
+              <div class="platform-symbol">f</div>
+              <span>Facebook</span>
+            </div>
+            <h3>Strengthen your public presence.</h3>
+            <p>Follower growth for eligible pages and professional profiles, with the right service selected for the account.</p>
+            <ul class="clean-list">
+              <li>Pages and professional profiles</li>
+              <li>Account check before delivery</li>
+              <li>Support throughout the order</li>
+            </ul>
+            <a href="followers.html?platform=facebook">Grow on Facebook <span>↗</span></a>
+          </article>
+        </div>
+
+        <div class="feature-offer reveal">
+          <div class="feature-offer-copy">
+            <span class="kicker">MOST REQUESTED</span>
+            <h3>10K follower growth</h3>
+            <p>A clear campaign target for brands and creators who want a visible step-change in their audience size.</p>
+            <div class="offer-points">
+              <span>Instagram</span><span>TikTok</span><span>Facebook</span>
+            </div>
+          </div>
+          <div class="offer-price">
+            <span>REFERENCE OFFER</span>
+            <strong><sup>$</sup>100</strong>
+            <small>per selected platform</small>
+            <a class="button button-light" href="followers.html?package=10000">Order 10K followers</a>
+          </div>
+        </div>
+        <p class="fine-print">Final availability, delivery method and pricing are confirmed after the account is checked. Platform rules and account eligibility apply.</p>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="process">
+      <div class="shell">
+        <div class="section-heading light reveal">
+          <div>
+            <span class="kicker">THE ORDER FLOW</span>
+            <h2>Simple from first click<br>to final delivery.</h2>
+          </div>
+          <p>You stay in control. Every order starts with the public account link and ends with clear delivery communication.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card reveal"><span>01</span><h3>Select</h3><p>Choose Instagram, TikTok or Facebook and your target follower amount.</p></article>
+          <article class="step-card reveal reveal-delay-sm"><span>02</span><h3>Submit</h3><p>Share the public profile link, country and preferred payment method.</p></article>
+          <article class="step-card reveal reveal-delay-md"><span>03</span><h3>Confirm</h3><p>Our team checks eligibility, confirms the service and sends payment details.</p></article>
+          <article class="step-card reveal reveal-delay-lg"><span>04</span><h3>Grow</h3><p>Delivery begins and you receive progress updates through WhatsApp.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="entertainment">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <span class="kicker">ENTERTAINMENT</span>
+            <h2>Streaming, now secondary<br>and deliberately simple.</h2>
+          </div>
+          <p>We kept only the two services you requested. Social growth remains the main focus of 97.world.</p>
+        </div>
+        <div class="streaming-grid">
+          <article class="stream-card prime-card reveal">
+            <div class="stream-logo prime-logo">prime <b>video</b><span class="smile">⌣</span></div>
+            <p>Prime Video setup and account support, with package details confirmed before payment.</p>
+            <a class="button button-ghost-light" href="streaming.html?service=prime">Order Prime Video</a>
+          </article>
+          <article class="stream-card apple-card reveal reveal-delay-sm">
+            <div class="stream-logo apple-logo"><span aria-hidden="true">●</span> tv+</div>
+            <p>Apple TV+ access support for compatible devices and eligible accounts.</p>
+            <a class="button button-ghost-light" href="streaming.html?service=apple">Order Apple TV+</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof-section">
+      <div class="shell proof-grid">
+        <div class="proof-copy reveal">
+          <span class="kicker">WHY 97.WORLD</span>
+          <h2>Built for fast-moving brands across East Africa.</h2>
+          <p>Clear communication, mobile-first ordering and local payment support for clients in Uganda and South Sudan—with delivery available beyond both markets.</p>
+          <a class="text-link" href="contact.html">Talk to the team <span>↗</span></a>
+        </div>
+        <div class="proof-cards">
+          <article class="proof-card reveal"><strong>01</strong><h3>No password</h3><p>Orders use your public profile or page link. Never share your login password.</p></article>
+          <article class="proof-card reveal reveal-delay-sm"><strong>02</strong><h3>Local support</h3><p>Direct WhatsApp assistance and Mobile Money guidance for Uganda-based orders.</p></article>
+          <article class="proof-card reveal reveal-delay-md"><strong>03</strong><h3>Clear updates</h3><p>Know when your order is confirmed, started and completed.</p></article>
+          <article class="proof-card reveal reveal-delay-lg"><strong>04</strong><h3>Account-aware</h3><p>We check the account first and select an available service suitable for it.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="shell final-cta-inner reveal">
+        <div>
+          <span class="kicker">READY TO MOVE?</span>
+          <h2>Your next 10,000 followers<br>start with one link.</h2>
+        </div>
+        <a class="button button-light button-large" href="followers.html">Build my order <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-top">
+      <a class="brand brand-footer" href="index.html">
+        <img src="assets/brand/97-mark.png" alt="" class="brand-mark">
+        <span class="brand-word">97<span>.world</span></span>
+      </a>
+      <p>Social growth first. Entertainment kept simple.</p>
+      <div class="footer-links">
+        <a href="followers.html">Followers</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="contact.html">Support</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
     </div>
-
-    <div class="page-content">
-
-        <header class="main-header">
-            <div class="container">
-                <div class="header-content">
-                    <a href="index.html" class="logo-link">
-                        <img src="logo.png" alt="Cartelug Logo" id="logo">
-                    </a>
-                    <p class="tagline">AVAILABLE IN UGANDA AND SOUTH SUDAN</p>
-                </div>
-                <nav id="main-nav" class="main-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Open Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </header>
-
-        <main>
-            <!-- SERVICES -->
-            <section id="services" class="platform-selection section-padding">
-                <div class="container">
-                    <h2 class="section-title">Choose Your Service</h2>
-                    <div class="platform-grid">
-
-                        <div class="platform-card netflix">
-                            <img src="netflix.png" alt="Netflix Logo" class="platform-logo-img">
-                            <a href="#" id="netflix-start-btn" class="get-started-btn netflix-btn">Get Started</a>
-                        </div>
-                        <div class="platform-card prime">
-                            <img src="prime-video.png" alt="Prime Video Logo" class="platform-logo-img">
-                            <a href="#" id="prime-start-btn" class="get-started-btn prime-btn">Get Started</a>
-                        </div>
-                        <div class="platform-card spotify">
-                            <img src="spotify.png" alt="Spotify Logo" class="platform-logo-img">
-                            <a href="#" id="spotify-start-btn" class="get-started-btn spotify-btn">Get Started</a>
-                        </div>
-                        <div class="platform-card social-boost-card">
-                            <img src="instagram.png" alt="Instagram Logo" class="platform-logo-img insta-boost-logo">
-                            <h3 class="service-title-text">Boost Instagram Likes</h3>
-                            <a href="instagram-boost.html" class="get-started-btn purple-btn">Get Started</a>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA -->
-            <section id="contact-cta" class="cta-section section-padding alt-bg">
-                <div class="container">
-                    <h2 class="section-title">Need Assistance?</h2>
-                    <p class="cta-text">Click below for fast support from our expert team.</p>
-                    <a href="contact.html" class="cta-button">Get Help Now</a>
-                </div>
-            </section>
-
-            <!-- ABOUT -->
-            <section id="about" class="why-choose-us section-padding">
-                <div class="container">
-                    <h2 class="section-title">Why Choose Cartelug?</h2>
-                    <div class="features-grid">
-                        <div class="feature-item support-feature">
-                            <i class="fas fa-headset feature-icon"></i>
-                            <h3>24/7 Customer Support</h3>
-                            <p>Always available to assist with your streaming needs, day or night.</p>
-                        </div>
-                        <div class="feature-item">
-                            <p class="trust-text">Trusted by over <strong>1500</strong> Ugandans and <strong>300+</strong> South Sudanese.</p>
-                            <div class="feature-flags">
-                                <img src="uganda-flag.png" alt="Uganda Flag" class="country-flag">
-                                <img src="south-sudan-flag.png" alt="South Sudan Flag" class="country-flag">
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="payment-feature-logos">
-                                <img src="mtn.png" alt="MTN Mobile Money" class="payment-logo-small">
-                                <img src="airtel.png" alt="Airtel Money" class="payment-logo-small">
-                            </div>
-                            <h3>Easy Payments</h3>
-                            <p>Convenient Mobile Money options (MTN & Airtel).</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TESTIMONIALS -->
-            <section class="testimonials section-padding alt-bg">
-                <div class="container">
-                    <h2 class="section-title">What Our Clients Say</h2>
-                    <div class="swiper testimonial-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="testimonial-card-new">
-                                    <img src="1.png" alt="Spotify Feedback 1" class="testimonial-img-large">
-                                    <p class="testimonial-quote">"Hitesh loves the Spotify"</p>
-                                    <cite class="testimonial-cite">Spotify Feedback</cite>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card-new">
-                                    <img src="2.png" alt="Spotify Feedback 2" class="testimonial-img-large">
-                                    <p class="testimonial-quote">"Olelo loves how easy it is to pay for 6 months of Spotify."</p>
-                                    <cite class="testimonial-cite">Spotify Feedback</cite>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card-new">
-                                    <img src="3.png" alt="Spotify Feedback 3" class="testimonial-img-large">
-                                    <p class="testimonial-quote">"Alma Enjoys the Spotify."</p>
-                                    <cite class="testimonial-cite">Spotify Feedback</cite>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card-new">
-                                    <img src="4.png" alt="Netflix Feedback 1" class="testimonial-img-large">
-                                    <p class="testimonial-quote">"Ugandan User successfully connected to Netflix, and paid after."</p>
-                                    <cite class="testimonial-cite">Netflix Feedback</cite>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card-new">
-                                    <img src="5.png" alt="Netflix Feedback 2" class="testimonial-img-large">
-                                    <p class="testimonial-quote">"South Sudanese User successfully connected to Netflix."</p>
-                                    <cite class="testimonial-cite">Netflix Feedback</cite>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- FOOTER -->
-        <footer class="main-footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="contact.html">Contact Us</a>
-                    </div>
-                    <div class="payment-info">
-                        <p>Secure Payments Accepted via Mobile Money:</p>
-                        <div class="payment-logos">
-                            <img src="mtn.png" alt="MTN Mobile Money" class="payment-logo">
-                            <img src="airtel.png" alt="Airtel Money" class="payment-logo">
-                        </div>
-                    </div>
-                    <p class="copyright">&copy; <span id="year"></span> Cartelug. All Rights Reserved.</p>
-                </div>
-            </div>
-        </footer>
-
-        <!-- MODALS -->
-        <div id="netflix-modal" class="modal">
-            <div class="modal-overlay"></div>
-            <div class="modal-content">
-                <button class="modal-close" aria-label="Close modal">&times;</button>
-                <img src="netflix.png" alt="Netflix" class="modal-logo">
-                <h2>Netflix Package Features</h2>
-                <ul class="features-list">
-                    <li><i class="fas fa-desktop"></i> 2 Devices Access</li>
-                    <li><i class="fas fa-user-clock"></i> 1 Device at a Time</li>
-                    <li><i class="fas fa-video"></i> 4K UHD Quality</li>
-                    <li><i class="fas fa-download"></i> Downloads Available</li>
-                </ul>
-                <a href="netflix-order.html" class="modal-button netflix-btn">Get Now</a>
-            </div>
-        </div>
-
-        <div id="prime-modal" class="modal">
-            <div class="modal-overlay"></div>
-            <div class="modal-content">
-                <button class="modal-close" aria-label="Close modal">&times;</button>
-                <img src="prime-video.png" alt="Prime Video" class="modal-logo">
-                <h2>Prime Video Features</h2>
-                <ul class="features-list">
-                    <li><i class="fas fa-download"></i> Downloads Available</li>
-                    <li><i class="fas fa-desktop"></i> 2 Devices Access</li>
-                    <li><i class="fas fa-video"></i> 4K UHD Quality</li>
-                </ul>
-                <a href="prime-order.html" class="modal-button prime-btn">Get Now</a>
-            </div>
-        </div>
-
-        <div id="spotify-modal" class="modal">
-            <div class="modal-overlay"></div>
-            <div class="modal-content">
-                <button class="modal-close" aria-label="Close modal">&times;</button>
-                <img src="spotify.png" alt="Spotify" class="modal-logo">
-                <h2>Spotify Premium Features</h2>
-                <ul class="features-list">
-                    <li><i class="fas fa-user-check"></i> Use Your Own Account</li>
-                    <li><i class="fas fa-music"></i> Unlimited Music Streaming</li>
-                    <li><i class="fas fa-download"></i> Downloads for Offline Use</li>
-                    <li><i class="fas fa-headphones"></i> Ad-Free Listening</li>
-                </ul>
-                <a href="spotify-order.html" class="modal-button spotify-btn">Get Now</a>
-            </div>
-        </div>
-
-        <!-- SCRIPTS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="script.js"></script>
-
+    <div class="shell footer-bottom">
+      <span>© <span data-year></span> 97.world. Kampala, Uganda.</span>
+      <span>Support: +256 762 193 386</span>
     </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/256762193386?text=Hello%2097.world%2C%20I%20want%20help%20with%20a%20social%20growth%20order." target="_blank" rel="noopener" aria-label="Chat with 97.world on WhatsApp">WA</a>
+  <script src="script.js"></script>
 </body>
 </html>

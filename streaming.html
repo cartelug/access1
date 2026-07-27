@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07070a">
+  <meta name="description" content="Prime Video and Apple TV+ support from 97.world.">
+  <title>Streaming Support — 97.world</title>
+  <link rel="icon" href="assets/ui/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inner-page">
+  <header class="site-header solid" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><img src="assets/brand/97-mark.png" alt="" class="brand-mark"><span class="brand-word">97<span>.world</span></span></a>
+      <nav class="desktop-nav"><a href="index.html#growth">Growth</a><a href="followers.html">Order followers</a><a href="index.html#entertainment">Entertainment</a><a href="contact.html">Support</a></nav>
+      <a class="button button-small button-primary desktop-cta" href="followers.html">Order followers</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
+    </div>
+    <div class="mobile-nav" data-mobile-nav><a href="index.html#growth">Growth</a><a href="followers.html">Order followers</a><a href="contact.html">Support</a></div>
+  </header>
+
+  <main>
+    <section class="inner-hero streaming-hero">
+      <div class="shell inner-hero-grid">
+        <div><span class="eyebrow"><span class="status-dot"></span> Entertainment support</span><h1>Only the essentials.</h1><p>Prime Video and Apple TV+ remain available as secondary services, with package and device compatibility confirmed before payment.</p></div>
+        <div class="streaming-mini-card"><span>2 services</span><strong>Prime Video<br>Apple TV+</strong></div>
+      </div>
+    </section>
+
+    <section class="order-section">
+      <div class="shell order-layout">
+        <form class="order-form" id="streaming-order-form">
+          <div class="form-step">
+            <div class="form-step-heading"><span>01</span><div><h2>Choose a service</h2><p>Select one service for this request.</p></div></div>
+            <div class="choice-grid choice-grid-two">
+              <label class="choice-card stream-choice"><input type="radio" name="service" value="Prime Video" required><span class="stream-choice-logo prime-logo">prime <b>video</b></span><small>Streaming access and setup support</small></label>
+              <label class="choice-card stream-choice"><input type="radio" name="service" value="Apple TV+" required><span class="stream-choice-logo apple-logo"><span aria-hidden="true">●</span> tv+</span><small>Access support for compatible devices</small></label>
+            </div>
+          </div>
+
+          <div class="form-step">
+            <div class="form-step-heading"><span>02</span><div><h2>Package details</h2><p>Tell us what you need and where you will use it.</p></div></div>
+            <div class="field-grid">
+              <div class="field"><label for="duration">Preferred duration</label><select id="duration" name="duration" required><option value="">Select duration</option><option>1 month</option><option>3 months</option><option>6 months</option><option>12 months</option><option>Recommend a package</option></select></div>
+              <div class="field"><label for="devices">Number of devices</label><select id="devices" name="devices" required><option value="">Select devices</option><option>1 device</option><option>2 devices</option><option>3+ devices</option></select></div>
+              <div class="field"><label for="stream-country">Country</label><select id="stream-country" name="country" required><option value="">Select country</option><option>Uganda</option><option>South Sudan</option><option>Other</option></select></div>
+              <div class="field"><label for="device-type">Main device</label><select id="device-type" name="deviceType" required><option value="">Select device</option><option>Smart TV</option><option>Phone or tablet</option><option>Laptop or desktop</option><option>Streaming box</option><option>Multiple devices</option></select></div>
+            </div>
+          </div>
+
+          <div class="form-step">
+            <div class="form-step-heading"><span>03</span><div><h2>Your contact details</h2><p>We confirm compatibility, package and payment on WhatsApp.</p></div></div>
+            <div class="field-grid">
+              <div class="field"><label for="stream-name">Your name</label><input id="stream-name" name="name" type="text" required></div>
+              <div class="field"><label for="stream-phone">WhatsApp number</label><input id="stream-phone" name="phone" type="tel" placeholder="+256..." required></div>
+              <div class="field field-full"><label for="stream-notes">Notes <span>(optional)</span></label><textarea id="stream-notes" name="notes" rows="4" placeholder="Existing account, device model or any setup question..."></textarea></div>
+            </div>
+          </div>
+          <div class="form-submit-row"><label class="check-row"><input type="checkbox" required><span>I understand that service availability and price are confirmed before payment.</span></label><button class="button button-primary button-large" type="submit">Send request to WhatsApp <span>↗</span></button></div>
+        </form>
+
+        <aside class="order-summary">
+          <span class="kicker">STREAMING SUPPORT</span><h2>Before you pay</h2>
+          <ul class="summary-list"><li>Device compatibility check</li><li>Package details confirmed</li><li>Payment instructions sent directly</li><li>Setup guidance included</li></ul>
+          <div class="summary-note"><strong>Social growth remains our main service.</strong><p>Streaming is retained as a smaller secondary offering.</p></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer compact-footer"><div class="shell footer-bottom"><span>© <span data-year></span> 97.world.</span><span>Support: +256 762 193 386</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
