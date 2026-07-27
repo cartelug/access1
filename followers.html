@@ -7,20 +7,24 @@
   <meta name="description" content="Build a follower growth order for Instagram, TikTok or Facebook with 97.world.">
   <title>Order Followers — 97.world</title>
   <link rel="icon" href="assets/ui/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="inner-page">
+  <a class="skip-link" href="#main">Skip to order builder</a>
   <header class="site-header solid" data-header>
     <div class="shell header-inner">
       <a class="brand" href="index.html" aria-label="97.world home"><img src="assets/brand/97-mark.png" alt="" class="brand-mark"><span class="brand-word">97<span>.world</span></span></a>
       <nav class="desktop-nav" aria-label="Primary navigation"><a href="index.html#growth">Growth</a><a href="index.html#process">How it works</a><a href="streaming.html">Entertainment</a><a href="contact.html">Support</a></nav>
       <a class="button button-small button-primary desktop-cta" href="contact.html">Get help</a>
-      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="mobile-navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
     </div>
-    <div class="mobile-nav" data-mobile-nav><a href="index.html#growth">Growth</a><a href="index.html#process">How it works</a><a href="streaming.html">Entertainment</a><a href="contact.html">Support</a></div>
+    <div class="mobile-nav" id="mobile-navigation" data-mobile-nav><a href="index.html#growth">Growth</a><a href="index.html#process">How it works</a><a href="streaming.html">Entertainment</a><a href="contact.html">Support</a></div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="inner-hero order-hero">
       <div class="shell inner-hero-grid">
         <div>
@@ -94,6 +98,11 @@
       </div>
     </section>
   </main>
+
+  <div class="mobile-order-bar" data-mobile-order-bar>
+    <span data-mobile-order-label>Choose a platform to begin</span>
+    <button type="button" data-mobile-order-submit>Review order <span aria-hidden="true">&nearr;</span></button>
+  </div>
 
   <footer class="site-footer compact-footer"><div class="shell footer-bottom"><span>© <span data-year></span> 97.world.</span><span>Support: +256 762 193 386</span></div></footer>
   <script src="script.js"></script>

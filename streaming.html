@@ -7,20 +7,24 @@
   <meta name="description" content="Prime Video and Apple TV+ support from 97.world.">
   <title>Streaming Support — 97.world</title>
   <link rel="icon" href="assets/ui/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="inner-page">
+  <a class="skip-link" href="#main">Skip to streaming request</a>
   <header class="site-header solid" data-header>
     <div class="shell header-inner">
       <a class="brand" href="index.html"><img src="assets/brand/97-mark.png" alt="" class="brand-mark"><span class="brand-word">97<span>.world</span></span></a>
       <nav class="desktop-nav"><a href="index.html#growth">Growth</a><a href="followers.html">Order followers</a><a href="index.html#entertainment">Entertainment</a><a href="contact.html">Support</a></nav>
       <a class="button button-small button-primary desktop-cta" href="followers.html">Order followers</a>
-      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="mobile-navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
     </div>
-    <div class="mobile-nav" data-mobile-nav><a href="index.html#growth">Growth</a><a href="followers.html">Order followers</a><a href="contact.html">Support</a></div>
+    <div class="mobile-nav" id="mobile-navigation" data-mobile-nav><a href="index.html#growth">Growth</a><a href="followers.html">Order followers</a><a href="contact.html">Support</a></div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="inner-hero streaming-hero">
       <div class="shell inner-hero-grid">
         <div><span class="eyebrow"><span class="status-dot"></span> Entertainment support</span><h1>Only the essentials.</h1><p>Prime Video and Apple TV+ remain available as secondary services, with package and device compatibility confirmed before payment.</p></div>

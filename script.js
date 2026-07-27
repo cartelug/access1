@@ -1,4 +1,5 @@
 (() => {
+  document.documentElement.classList.add('js');
   const WHATSAPP_NUMBER = '256762193386';
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -13,23 +14,40 @@
   const menuButton = $('[data-menu-button]');
   const mobileNav = $('[data-mobile-nav]');
   if (menuButton && mobileNav) {
+    const setMenuState = open => {
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      mobileNav.classList.toggle('open', open);
+      document.body.classList.toggle('menu-open', open);
+      if (open) {
+        const firstLink = $('a', mobileNav);
+        window.setTimeout(() => firstLink?.focus(), 120);
+      }
+    };
     menuButton.addEventListener('click', () => {
       const open = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!open));
-      mobileNav.classList.toggle('open', !open);
-      document.body.classList.toggle('menu-open', !open);
+      setMenuState(!open);
     });
     $$('a', mobileNav).forEach(link => link.addEventListener('click', () => {
-      menuButton.setAttribute('aria-expanded', 'false');
-      mobileNav.classList.remove('open');
-      document.body.classList.remove('menu-open');
+      setMenuState(false);
     }));
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-        menuButton.setAttribute('aria-expanded', 'false');
-        mobileNav.classList.remove('open');
-        document.body.classList.remove('menu-open');
+        setMenuState(false);
         menuButton.focus();
+      }
+      if (event.key === 'Tab' && menuButton.getAttribute('aria-expanded') === 'true') {
+        const focusable = $$('a, button', mobileNav).filter(element => !element.hasAttribute('disabled'));
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
       }
     });
   }
@@ -110,6 +128,29 @@
     followerForm.addEventListener('input', updateFollowerSummary);
     followerForm.addEventListener('change', updateFollowerSummary);
     updateFollowerSummary();
+
+    const mobileOrderLabel = $('[data-mobile-order-label]');
+    const mobileOrderSubmit = $('[data-mobile-order-submit]');
+    const updateMobileOrderBar = () => {
+      if (!mobileOrderLabel) return;
+      const data = new FormData(followerForm);
+      const platform = data.get('platform');
+      const selectedPackage = data.get('package');
+      mobileOrderLabel.textContent = platform
+        ? `${platform}${selectedPackage ? ` · ${selectedPackage.split(' — ')[0]}` : ' · choose a target'}`
+        : 'Choose a platform to begin';
+    };
+    followerForm.addEventListener('change', updateMobileOrderBar);
+    updateMobileOrderBar();
+    mobileOrderSubmit?.addEventListener('click', () => {
+      const firstMissing = $('input:invalid, select:invalid, textarea:invalid', followerForm);
+      if (firstMissing) {
+        firstMissing.closest('.form-step')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.setTimeout(() => firstMissing.focus(), 350);
+        return;
+      }
+      followerForm.requestSubmit();
+    });
 
     followerForm.addEventListener('submit', event => {
       event.preventDefault();
