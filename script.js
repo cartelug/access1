@@ -24,6 +24,14 @@
       mobileNav.classList.remove('open');
       document.body.classList.remove('menu-open');
     }));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        menuButton.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        menuButton.focus();
+      }
+    });
   }
 
   const revealObserver = 'IntersectionObserver' in window
@@ -35,6 +43,30 @@
       }), { threshold: 0.12 })
     : null;
   $$('.reveal').forEach(el => revealObserver ? revealObserver.observe(el) : el.classList.add('visible'));
+
+  const animateCounter = element => {
+    const target = Number(element.dataset.counter || 0);
+    if (!target || element.dataset.animated === 'true') return;
+    element.dataset.animated = 'true';
+    const started = performance.now();
+    const duration = 1100;
+    const tick = now => {
+      const progress = Math.min((now - started) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      element.textContent = Math.round(target * eased).toLocaleString();
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  const counterObserver = 'IntersectionObserver' in window
+    ? new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      }), { threshold: 0.7 })
+    : null;
+  $$('[data-counter]').forEach(el => counterObserver ? counterObserver.observe(el) : animateCounter(el));
 
   const waOpen = message => {
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
