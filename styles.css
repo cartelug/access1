@@ -49,3 +49,49 @@
 @keyframes whatsapp-pulse{0%,70%,100%{box-shadow:0 14px 40px rgba(0,0,0,.28),0 0 0 0 rgba(37,211,102,0)}85%{box-shadow:0 14px 40px rgba(0,0,0,.28),0 0 0 10px rgba(37,211,102,.12)}}
 @media(max-width:640px){.hero-media video{animation:none;transform:scale(1.01)}.hero-glow{filter:blur(55px);opacity:.16}.platform-card:hover,.stream-card:hover,.proof-card:hover,.step-card:hover{transform:none}.button-primary{animation:none}.floating-whatsapp{animation:none}.hero h1{letter-spacing:-.065em}.section-heading h2,.proof-copy h2{letter-spacing:-.055em}.hero-trust span{font-size:.72rem}}
 @media(prefers-reduced-motion:reduce){.hero-media video,.hero-glow-one,.hero-glow-two,.hero-copy .eyebrow,.hero-copy h1,.hero-copy .hero-lede,.hero-copy .hero-actions,.hero-trust,.button-primary,.feature-offer:after,.live-chip,.floating-whatsapp{animation:none}.reveal{opacity:1;transform:none}.platform-card,.stream-card,.proof-card,.step-card{transition:none}}
+
+/* Local platform marks stay crisp and keep their proportions at every breakpoint. */
+.platform-symbol img,.choice-icon img{width:26px;height:26px;object-fit:contain}
+.platform-symbol img{width:27px;height:27px}
+.choice-icon img{width:24px;height:24px}
+.apple-logo{display:inline-flex;align-items:center;gap:8px}
+.apple-logo img{width:32px;height:32px;object-fit:contain}
+.stream-choice-logo.apple-logo img{width:27px;height:27px}
+.prime-logo{display:inline-flex;align-items:baseline;gap:5px;flex-wrap:wrap}
+body{overflow-x:hidden}
+@media(max-width:480px){
+  .shell{width:calc(100% - 28px)}
+  .header-inner{gap:12px}
+  .brand-word{font-size:1rem}
+  .hero{min-height:820px}
+  .hero-content{gap:28px;padding-top:116px;padding-bottom:64px}
+  .hero h1{font-size:clamp(3rem,15vw,4.5rem);line-height:.92}
+  .hero-lede{font-size:.93rem;line-height:1.65}
+  .hero-actions{gap:10px;margin-top:25px}
+  .hero-actions .button{min-height:54px}
+  .growth-dashboard{width:100%;padding:18px}
+  .dashboard-number{margin:25px 0 13px}
+  .dashboard-number span{font-size:3rem}
+  .dashboard-platforms{grid-template-columns:1fr;gap:8px}
+  .section{padding:70px 0}
+  .section-heading h2{font-size:clamp(2.35rem,12vw,3.3rem)}
+  .platform-card{min-height:0;padding:22px}
+  .platform-card h3{font-size:1.85rem;margin-top:40px}
+  .feature-offer-copy h3{font-size:clamp(2.75rem,13vw,4rem)}
+  .offer-price strong{font-size:4.6rem}
+  .steps-grid{gap:10px}
+  .step-card{min-height:205px;padding:23px}
+  .stream-card{min-height:310px;padding:24px}
+  .stream-card p{margin:28px 0 24px}
+  .final-cta h2{font-size:clamp(2.45rem,12vw,3.5rem)}
+  .footer-top{padding-bottom:38px}
+  .footer-links{gap:12px}
+  .inner-hero h1,.contact-copy h1,.legal h1{font-size:clamp(3.1rem,15vw,4.4rem)}
+  .form-step-heading{gap:12px;margin-bottom:22px}
+  .form-step-heading h2{font-size:1.3rem}
+  .choice-card{min-height:128px;padding:17px}
+  .choice-card strong{font-size:.98rem}
+  .choice-grid-four{grid-template-columns:1fr 1fr}
+  .field input,.field select,.field textarea{font-size:16px}
+  .contact-form{border-radius:20px}
+}
