@@ -11,6 +11,15 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  const floatingWhatsApp = $('.floating-whatsapp');
+  const heroPrimaryCta = $('.hero-actions .button');
+  if (floatingWhatsApp && heroPrimaryCta && 'IntersectionObserver' in window) {
+    const floatingObserver = new IntersectionObserver(([entry]) => {
+      floatingWhatsApp.classList.toggle('is-suppressed', entry.isIntersecting);
+    }, { threshold: .15 });
+    floatingObserver.observe(heroPrimaryCta);
+  }
+
   const menuButton = $('[data-menu-button]');
   const mobileNav = $('[data-mobile-nav]');
   if (menuButton && mobileNav) {
@@ -31,13 +40,18 @@
     $$('a', mobileNav).forEach(link => link.addEventListener('click', () => {
       setMenuState(false);
     }));
+    window.addEventListener('resize', () => {
+      if (getComputedStyle(menuButton).display === 'none' && menuButton.getAttribute('aria-expanded') === 'true') {
+        setMenuState(false);
+      }
+    }, { passive: true });
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
         setMenuState(false);
         menuButton.focus();
       }
       if (event.key === 'Tab' && menuButton.getAttribute('aria-expanded') === 'true') {
-        const focusable = $$('a, button', mobileNav).filter(element => !element.hasAttribute('disabled'));
+        const focusable = [menuButton, ...$$('a, button', mobileNav)].filter(element => !element.hasAttribute('disabled'));
         if (!focusable.length) return;
         const first = focusable[0];
         const last = focusable[focusable.length - 1];
@@ -94,6 +108,17 @@
   const urlParams = new URLSearchParams(window.location.search);
   const followerForm = $('#follower-order-form');
   if (followerForm) {
+    const mobileOrderBar = $('[data-mobile-order-bar]');
+    if (mobileOrderBar) {
+      document.body.classList.add('has-mobile-order-bar');
+      const syncKeyboardState = () => {
+        const viewport = window.visualViewport;
+        document.body.classList.toggle('keyboard-open', Boolean(viewport && viewport.height < window.innerHeight * .72));
+      };
+      window.visualViewport?.addEventListener('resize', syncKeyboardState, { passive: true });
+      syncKeyboardState();
+    }
+
     const initialPlatform = urlParams.get('platform');
     const initialPackage = urlParams.get('package');
     if (initialPlatform) {

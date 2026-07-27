@@ -9,19 +9,19 @@
   <link rel="icon" href="assets/ui/icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Syne:wght@600..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main">Skip to streaming request</a>
   <header class="site-header solid" data-header>
     <div class="shell header-inner">
-      <a class="brand" href="index.html"><img src="assets/brand/97-mark.png" alt="" class="brand-mark"><span class="brand-word">97<span>.world</span></span></a>
-      <nav class="desktop-nav"><a href="index.html#growth">Growth</a><a href="followers.html">Order followers</a><a href="index.html#entertainment">Entertainment</a><a href="contact.html">Support</a></nav>
+      <a class="brand" href="index.html" aria-label="97.world home"><img src="assets/brand/97-mark.png" alt="" class="brand-mark"><span class="brand-word">97<span>.world</span></span></a>
+      <nav class="desktop-nav" aria-label="Primary navigation"><a href="index.html#growth">Growth</a><a href="followers.html">Order followers</a><a href="index.html#entertainment">Entertainment</a><a href="contact.html">Support</a></nav>
       <a class="button button-small button-primary desktop-cta" href="followers.html">Order followers</a>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="mobile-navigation" aria-expanded="false" data-menu-button><span></span><span></span></button>
     </div>
-    <div class="mobile-nav" id="mobile-navigation" data-mobile-nav><a href="index.html#growth">Growth</a><a href="followers.html">Order followers</a><a href="contact.html">Support</a></div>
+    <div class="mobile-nav" id="mobile-navigation" role="navigation" aria-label="Mobile navigation" data-mobile-nav><span class="mobile-nav-label">Explore 97.world</span><a href="index.html#growth">Growth services</a><a href="followers.html">Order followers</a><a href="contact.html">Support</a><a class="button button-primary" href="#streaming-order-form">Start request <span aria-hidden="true">&darr;</span></a></div>
   </header>
 
   <main id="main">
@@ -36,8 +36,8 @@
       <div class="shell order-layout">
         <form class="order-form" id="streaming-order-form">
           <div class="form-step">
-            <div class="form-step-heading"><span>01</span><div><h2>Choose a service</h2><p>Select one service for this request.</p></div></div>
-            <div class="choice-grid choice-grid-two">
+            <div class="form-step-heading"><span>01</span><div><h2 id="service-choice-heading">Choose a service</h2><p>Select one service for this request.</p></div></div>
+            <div class="choice-grid choice-grid-two" role="radiogroup" aria-labelledby="service-choice-heading">
               <label class="choice-card stream-choice"><input type="radio" name="service" value="Prime Video" required><span class="stream-choice-logo prime-logo">prime <b>video</b></span><small>Streaming access and setup support</small></label>
               <label class="choice-card stream-choice"><input type="radio" name="service" value="Apple TV+" required><span class="stream-choice-logo apple-logo"><img src="assets/platform/appletv.svg" alt="" aria-hidden="true"><span>tv</span></span><small>Access support for compatible devices</small></label>
             </div>
@@ -56,8 +56,8 @@
           <div class="form-step">
             <div class="form-step-heading"><span>03</span><div><h2>Your contact details</h2><p>We confirm compatibility, package and payment on WhatsApp.</p></div></div>
             <div class="field-grid">
-              <div class="field"><label for="stream-name">Your name</label><input id="stream-name" name="name" type="text" required></div>
-              <div class="field"><label for="stream-phone">WhatsApp number</label><input id="stream-phone" name="phone" type="tel" placeholder="+256..." required></div>
+              <div class="field"><label for="stream-name">Your name</label><input id="stream-name" name="name" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="stream-phone">WhatsApp number</label><input id="stream-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+256..." required></div>
               <div class="field field-full"><label for="stream-notes">Notes <span>(optional)</span></label><textarea id="stream-notes" name="notes" rows="4" placeholder="Existing account, device model or any setup question..."></textarea></div>
             </div>
           </div>

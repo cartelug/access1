@@ -17,7 +17,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Syne:wght@600..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="home-page">
@@ -40,7 +40,7 @@
         <span></span><span></span>
       </button>
     </div>
-    <div class="mobile-nav" id="mobile-navigation" data-mobile-nav>
+    <div class="mobile-nav" id="mobile-navigation" role="navigation" aria-label="Mobile navigation" data-mobile-nav>
       <span class="mobile-nav-label">Explore 97.world</span>
       <a href="#growth">Growth services</a>
       <a href="#process">How it works</a>
@@ -56,7 +56,7 @@
       <div class="hero-watermark" aria-hidden="true">97</div>
       <div class="shell hero-content">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="status-dot"></span> Uganda &middot; South Sudan &middot; Worldwide</div>
+          <div class="eyebrow"><span class="status-dot"></span><span class="market-full">Uganda &middot; South Sudan &middot; Worldwide</span><span class="market-compact">Uganda &middot; Worldwide</span></div>
           <h1>
             <span class="headline-line">Your audience</span>
             <span class="headline-line">should look as big</span>
@@ -118,6 +118,7 @@
           <p>Choose where you want more presence. We check the public account, confirm what is available, and guide the rest without asking for private credentials.</p>
         </div>
 
+        <span class="mobile-swipe-hint" aria-hidden="true">Swipe to compare <span>&rarr;</span></span>
         <div class="platform-cards platform-menu">
           <article class="platform-card card-instagram reveal">
             <div class="platform-card-top">
@@ -178,7 +179,10 @@
     <section class="campaign-section">
       <div class="shell campaign-grid">
         <div class="campaign-art reveal">
-          <img src="assets/hero/97-social-preview.png" alt="97.world campaign artwork reading Make Your Numbers Move" width="1672" height="941" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="assets/hero/97-social-preview.webp" type="image/webp">
+            <img src="assets/hero/97-social-preview.png" alt="97.world campaign artwork reading Make Your Numbers Move" width="1672" height="941" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="campaign-copy reveal reveal-delay-sm">
           <span class="kicker">BUILT FOR MOMENTUM</span>
