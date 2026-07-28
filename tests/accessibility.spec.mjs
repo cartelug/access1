@@ -4,8 +4,8 @@ import { publicPages } from './helpers.mjs';
 
 for (const route of publicPages) {
   test(`${route || 'home'} has no serious or critical WCAG violations`, async ({ page }) => {
-    await page.goto(route, { waitUntil: 'domcontentloaded' });
     await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto(route, { waitUntil: 'domcontentloaded' });
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
       .analyze();
@@ -21,6 +21,7 @@ for (const route of publicPages) {
 }
 
 test('mobile navigation state remains accessible', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('');
   await page.locator('[data-menu-button]').click();

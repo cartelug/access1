@@ -2338,14 +2338,16 @@ html.js .no-js-fallback {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .js .reveal,
+  .js [data-reveal],
   .reveal,
   [data-reveal] {
-    opacity: 1;
-    transform: none;
-    filter: none;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
   }
   [data-parallax] {
-    translate: none;
-    scale: 1;
+    translate: none !important;
+    scale: 1 !important;
   }
 }
