@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://97.world/sitemap.xml
+Sitemap: https://cartelug.github.io/access1/sitemap.xml

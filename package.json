@@ -1,0 +1,22 @@
+{
+  "name": "97-world-static-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Development-only quality checks for the dependency-free 97.world static site.",
+  "type": "module",
+  "scripts": {
+    "preview": "node tests/serve.mjs",
+    "check:diff": "git diff --check",
+    "check:static": "node scripts/check-static.mjs",
+    "test:e2e": "playwright test",
+    "test:a11y": "playwright test tests/accessibility.spec.mjs",
+    "test": "npm run check:diff && npm run check:static && npm run test:e2e"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.54.2"
+  }
+}

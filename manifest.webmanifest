@@ -1,7 +1,8 @@
 {
   "name": "97.world",
   "short_name": "97.world",
-  "start_url": "./index.html",
+  "start_url": "/access1/",
+  "scope": "/access1/",
   "display": "standalone",
   "background_color": "#07070a",
   "theme_color": "#07070a",
