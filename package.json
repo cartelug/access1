@@ -10,7 +10,8 @@
     "check:static": "node scripts/check-static.mjs",
     "test:e2e": "playwright test",
     "test:a11y": "playwright test tests/accessibility.spec.mjs",
-    "test": "npm run check:diff && npm run check:static && npm run test:e2e"
+    "test": "npm run check:diff && npm run check:static && npm run test:e2e && npm run test:fastway",
+    "test:fastway": "node --test integrations/fastway/worker.test.mjs"
   },
   "engines": {
     "node": ">=20"
