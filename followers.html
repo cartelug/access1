@@ -22,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Syne:wght@600..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260728-1">
+  <link rel="stylesheet" href="fastway-catalog.css">
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main">Skip to order builder</a>
@@ -117,6 +118,24 @@
         </aside>
       </div>
     </section>
+
+    <section class="supplier-check" id="service-availability" data-supplier-catalog data-endpoint="" aria-labelledby="supplier-title">
+      <div class="shell supplier-check-inner">
+        <div>
+          <span class="kicker">MORE WAYS TO GROW</span>
+          <h2 id="supplier-title">The right service starts with a check.</h2>
+          <p>Ask about follower and comment services. Our team checks the current supplier catalogue, account eligibility and order limits before confirming a service or price.</p>
+        </div>
+        <div class="supplier-check-panel">
+          <strong>Availability &amp; order limits</strong>
+          <p data-supplier-status role="status" aria-live="polite">Service options are currently verified by our team. We do not place unapproved automatic supplier orders.</p>
+          <ul class="supplier-check-list" data-supplier-list hidden></ul>
+          <div class="supplier-check-actions">
+            <a class="button button-primary" href="contact.html">Ask about a service <span aria-hidden="true">&nearr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <div class="mobile-order-bar" data-mobile-order-bar>
@@ -126,5 +145,6 @@
 
   <footer class="site-footer compact-footer"><div class="shell footer-bottom"><span>© <span data-year></span> 97.world.</span><span class="footer-inline-links"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="https://wa.me/256762193386" target="_blank" rel="noopener">WhatsApp support</a></span></div></footer>
   <script src="script.js?v=20260728-1"></script>
+  <script src="fastway-catalog.js" defer></script>
 </body>
 </html>
