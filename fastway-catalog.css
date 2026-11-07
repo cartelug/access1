@@ -1,0 +1,34 @@
+/* Optional, read-only supplier catalogue. Never display provider wholesale rates. */
+.supplier-check { padding: 8px 0 78px; background: var(--cream, #f4eee5); }
+.supplier-check-inner {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  gap: clamp(20px, 4vw, 70px); align-items: center;
+  padding: clamp(24px, 4vw, 54px);
+  background: #141216; color: #fff; border-radius: 26px;
+  box-shadow: 0 26px 60px rgba(11, 8, 12, .12);
+}
+.supplier-check h2 {
+  max-width: 14ch; margin: 12px 0 16px;
+  font-size: clamp(1.7rem, 3.4vw, 3.1rem);
+  letter-spacing: -.04em; line-height: 1.08;
+}
+.supplier-check p { margin: 0; max-width: 52ch; color: #c9c3cb; line-height: 1.7; }
+.supplier-check .kicker { color: #ffb394; }
+.supplier-check-panel {
+  padding: 22px; border: 1px solid rgba(255,255,255,.17);
+  background: rgba(255,255,255,.055); border-radius: 20px;
+}
+.supplier-check-panel > strong { display: block; margin-bottom: 10px; font-size: 1.08rem; }
+.supplier-check-list { display: grid; gap: 12px; margin: 16px 0 0; padding: 0; list-style: none; }
+.supplier-check-list[hidden] { display: none; }
+.supplier-check-list li {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: 7px 20px; padding: 13px 0; border-top: 1px solid rgba(255,255,255,.14);
+}
+.supplier-check-list li strong { font-size: .95rem; }
+.supplier-check-list li span { font-size: .83rem; color: #c9c3cb; }
+.supplier-check-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+@media (max-width: 760px) {
+  .supplier-check { padding-bottom: 54px; }
+  .supplier-check-inner { grid-template-columns: 1fr; border-radius: 20px; }
+}
